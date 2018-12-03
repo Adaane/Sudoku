@@ -4,7 +4,12 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "app.js",
-    path: path.resolve(__dirname, "./dist")
+    path: path.resolve(__dirname, "./public")
+  },
+  devServer: {
+    contentBase: path.join(__dirname, './public'),
+    compress: true,
+    port: 9000
   },
   module: {
     rules: [
@@ -12,7 +17,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
     ]
   }
 };

@@ -3,7 +3,7 @@ import Block from "./Block";
 
 const generateGrid = () => {
   const grid = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 9; i += 1) {
     grid.push([]);
 
     for (let j = 0; j < 9; j += 1) {
@@ -21,7 +21,13 @@ const generateGrid = () => {
 const initialGrid = generateGrid();
 console.log(initialGrid);
 const Grid = () => {
-  return initialGrid.map((block, index) => <Block key={index} block={block} />);
+  return (
+    <div className="Grid">
+      {initialGrid.map((block, index) => (
+        <Block key={index} block={block} />
+      ))}
+    </div>
+  );
 };
 
 export default Grid;

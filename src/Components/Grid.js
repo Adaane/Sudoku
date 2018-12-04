@@ -1,6 +1,11 @@
 import React from "react";
 import Block from "./Block";
 
+const getXAxis = (i, j) => (j % 3) + i * 3;
+const getYAxis = (i, j) => {
+  return i % 3;
+};
+
 const generateGrid = () => {
   const grid = [];
   for (let i = 0; i < 9; i += 1) {
@@ -8,8 +13,8 @@ const generateGrid = () => {
 
     for (let j = 0; j < 9; j += 1) {
       grid[i].push({
-        x: 0,
-        y: 0,
+        x: getXAxis(i, j),
+        y: getYAxis(i, j),
         value: 0
       });
     }
@@ -19,7 +24,7 @@ const generateGrid = () => {
 };
 
 const initialGrid = generateGrid();
-console.log(initialGrid);
+
 const Grid = () => {
   return (
     <div className="Grid">

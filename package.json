@@ -2,26 +2,30 @@
   "repository": {},
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch-stdin",
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2"
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
     "@babel/preset-env": "7.1.0",
     "@babel/preset-react": "7.0.0",
     "babel-loader": "8.0.4",
-    "css-loader": "^1.0.1",
-    "node-sass": "^4.10.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
+    "css-loader": "1.0.1",
+    "node-sass": "4.10.0",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
     "webpack": "4.25.1",
     "webpack-cli": "3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "3.1.10"
   }
 }

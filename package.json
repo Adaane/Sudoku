@@ -9,7 +9,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch-stdin",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
     "react": "16.7.0-alpha.2",
